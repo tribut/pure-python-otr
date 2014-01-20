@@ -38,6 +38,12 @@ import base64
 import logging
 import struct
 
+from os.path import expanduser
+logging.basicConfig(
+        format = "%(asctime)-15s %(message)s",
+        filename = expanduser("~/potr.log"),
+        level = logging.DEBUG)
+
 logger = logging.getLogger(__name__)
 
 from potr import crypt

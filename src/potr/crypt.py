@@ -27,6 +27,12 @@ from potr.compatcrypto import SHA256, SHA1, SHA1HMAC, SHA256HMAC, \
 from potr.utils import bytes_to_long, long_to_bytes, pack_mpi, read_mpi
 from potr import proto
 
+from os.path import expanduser
+logging.basicConfig(
+        format = "%(asctime)-15s %(message)s",
+        filename = expanduser("~/potr.log"),
+        level = logging.DEBUG)
+
 logger = logging.getLogger(__name__)
 
 STATE_NONE = 0
